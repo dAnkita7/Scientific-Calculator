@@ -1,0 +1,225 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #d2cccc;
+  color: #181313;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px;
+  min-height: 100vh;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #430808;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.navbar button {
+  background: none;
+  border: none;
+  color: rgb(243, 209, 209);
+  font-size: 20px;
+  padding: 15px 30px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.navbar button:hover,
+.navbar button.active {
+  background-color: #922b2b;
+}
+
+.navbar .toggle-angle {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .toggle-angle label {
+  margin-right: 10px;
+}
+
+.navbar select {
+  padding: 5px;
+  font-size: 16px;
+}
+
+.calculator {
+  margin-top: 100px; /* Adjusted to avoid overlap with fixed navbar */
+  background-color: white;
+  padding: 40px; /* Increased padding for a larger card */
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  width: 550px; /* Increased width */
+  max-width: 100%;
+}
+
+.display {
+  font-size: 30px; /* Increased font size */
+  margin-bottom: 20px;
+  background-color: #d2cbcb;
+  padding: 30px; /* Increased padding */
+  border-radius: 5px;
+  text-align: right;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.buttons .button {
+  flex: 1 1 20%;
+  margin: 5px;
+}
+
+.buttons .button button {
+  width: 100%;
+  padding: 17px;
+  font-size: 18px;
+  border: none;
+  background-color: #a03f3f;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.buttons .button button:hover {
+  background-color: #5e2323;
+}
+
+#AC button {
+  background-color: red;
+  color: white;
+}
+
+#equals button {
+  background-color: green;
+  color: white;
+}
+
+.metric-converter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.metric-converter .input-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.metric-converter input {
+  padding: 10px;
+  font-size: 18px;
+  margin-right: 10px;
+  width: 150px;
+}
+
+.metric-converter select {
+  padding: 10px;
+  font-size: 18px;
+  background-color: #8b8888;
+}
+
+.metric-converter .equals {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+.metric-converter .result {
+  font-size: 24px;
+  margin-bottom: 17px;
+  padding: 20px;
+  background-color: #ecdfdf;
+  border-radius: 5px;
+  width: 100%;
+  text-align: center;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.metric-converter button {
+  padding: 10px 25px;
+  font-size: 18px;
+  background-color: #843131;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.metric-converter button:hover {
+  background-color: #5e2323;
+}
+
+.history {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.history h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+}
+
+.memory {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.memory h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+}
+
+.memory span {
+  display: block;
+  padding: 10px;
+  background-color: #eee;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+
+.welcome-message {
+  margin-top: 70px; /* Adjust as needed to position below the navbar */
+  text-align: center;
+  font-size: 23px;
+  color: #333;
+  padding: 20px 0;
+}
+
+.calculator {
+  margin-top: 30px; /* Adjust this margin to create space below the welcome message */
+}
+
+.error {
+  color: rgb(155, 5, 5);
+  margin-top: 20px;
+  text-align: center;
+}
